@@ -1,0 +1,47 @@
+{
+  "name": "klevr",
+  "version": "0.0.1",
+  "description": "Freelance portfolio website of Kevin Van Den Haute",
+  "homepage": "https://github.com/kvandenhaute/klevr",
+  "license": "MIT",
+  "author": "Kevin Van Den Haute",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kvandenhaute/klevr.git"
+  },
+  "engines": {
+    "node": "12.16.3"
+  },
+  "scripts": {
+    "css:fix": "stylelint --fix 'module/**/*.scss'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.scss": "stylelint --fix"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "0.11.0",
+    "autoprefixer": "9.8.0",
+    "browser-sync": "2.26.7",
+    "css-declaration-sorter": "5.1.2",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.2",
+    "node-sass": "4.14.1",
+    "npm-check-updates": "6.0.1",
+    "postcss": "7.0.30",
+    "postcss-combine-duplicated-selectors": "8.1.0",
+    "postcss-combine-media-query": "1.0.1",
+    "postcss-discard-duplicates": "4.0.2",
+    "postcss-discard-empty": "4.0.1",
+    "postcss-merge-longhand": "4.0.11",
+    "postcss-parent-selector": "1.0.0",
+    "stylelint": "13.4.0",
+    "stylelint-config-sass-guidelines": "7.0.0",
+    "stylelint-order": "4.0.0",
+    "stylelint-scss": "3.17.2"
+  }
+}
