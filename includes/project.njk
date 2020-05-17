@@ -1,0 +1,39 @@
+<article class="chapter">
+	<header class="chapter__header">
+		<div class="chapter__period">
+			<time datetime="{{ project.data.from | datetime }}" class="date">{{ project.data.from | readableDate }}</time> -
+
+			{% if project.data.until == 'present' %}
+				present
+			{% else %}
+				<time datetime="{{ project.data.until | datetime }}" class="date">{{ project.data.until | readableDate }}</time>
+			{% endif %}
+		</div>
+		<h3 class="chapter__title">
+			{{ project.data.name }}
+		</h3>
+		<div class="chapter__hmz">
+			<ul class="list">
+				{%- for function in project.data.function -%}
+					<li class="list-item">
+						{{ function }}
+					</li>
+				{%- endfor -%}
+
+				<li class="list-item">
+					{{ project.data.client }}
+				</li>
+			</ul>
+		</div>
+	</header>
+	{{ project.templateContent | safe }}
+	<footer class="chapter__footer">
+		<ul class="list">
+			{%- for technology in project.data.keywords -%}
+				<li class="list-item">
+					<span class="tag tag--technology">{{ technology }}</span>
+				</li>
+			{%- endfor -%}
+		</ul>
+	</footer>
+</article>

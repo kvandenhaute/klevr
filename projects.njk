@@ -1,0 +1,13 @@
+---
+title: Projects
+description: Yes, I've been around
+tags:
+    - section
+---
+<ul class="list">
+    {%- for project in collections.project -%}
+        <li class="list-item">
+            {% include "project.njk" %}
+        </li>
+    {%- endfor -%}
+</ul>
