@@ -1,6 +1,20 @@
 const { DateTime } = require('luxon');
 
 module.exports = function (eleventyConfig) {
+	eleventyConfig.addCollection('sections', function (collection) {
+		return collection
+			.getFilteredByTag('section')
+			.sort(function (a, b) {
+				if (a.data.order > b.data.order) {
+					return 1;
+				} else if (b.data.order > a.data.order) {
+					return -1;
+				}
+
+				return 0;
+			});
+	});
+
 	eleventyConfig.addFilter('readableDate', dateObj => {
 		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('LLLL yyyy');
 	});
