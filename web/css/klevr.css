@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box; }
+
+::before,
+::after {
+  box-sizing: inherit; }
+
+html {
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.15;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  margin: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0; }
+  h1 + h1,
+  h2 + h1,
+  h3 + h1,
+  h4 + h1,
+  h5 + h1,
+  p + h1, h1 +
+  h2,
+  h2 +
+  h2,
+  h3 +
+  h2,
+  h4 +
+  h2,
+  h5 +
+  h2,
+  p +
+  h2, h1 +
+  h3,
+  h2 +
+  h3,
+  h3 +
+  h3,
+  h4 +
+  h3,
+  h5 +
+  h3,
+  p +
+  h3, h1 +
+  h4,
+  h2 +
+  h4,
+  h3 +
+  h4,
+  h4 +
+  h4,
+  h5 +
+  h4,
+  p +
+  h4, h1 +
+  h5,
+  h2 +
+  h5,
+  h3 +
+  h5,
+  h4 +
+  h5,
+  h5 +
+  h5,
+  p +
+  h5, h1 +
+  p,
+  h2 +
+  p,
+  h3 +
+  p,
+  h4 +
+  p,
+  h5 +
+  p,
+  p +
+  p {
+    margin-top: 1em; }
+
+ul {
+  margin-top: 0; }
+
+picture {
+  display: block; }
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto; }
+
+:root {
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif; }
+
+:root {
+  --book-background-color: #4c5b5c;
+  --book-text-color: #e9e7da; }
+
+.book {
+  background-color: var(--book-background-color);
+  color: var(--book-text-color);
+  font-family: var(--font-family-sans-serif);
+  font-size: 16px;
+  line-height: 1.5; }
+  @media only screen and (orientation: landscape) and (max-device-width: 812px) and (max-device-height: 414px) {
+    .book {
+      position: relative;
+      height: 100vh;
+      background-image: url("../img/landscape-to-portrait.svg");
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 25vh; } }
+
+@media only screen and (orientation: landscape) and (max-device-width: 812px) and (max-device-height: 414px) {
+  .book > * {
+    display: none; } }
+
+.book__header {
+  padding: 2rem;
+  text-align: center; }
+
+.book__title {
+  font-family: "Open Sans Condensed", var(--font-family-sans-serif);
+  font-size: 10vw;
+  line-height: 1;
+  text-transform: lowercase; }
+
+.subtitle {
+  display: inline-block;
+  position: relative;
+  font-family: var(--font-family-monospace);
+  font-size: 4vw;
+  font-weight: 400; }
+  .subtitle::after {
+    position: absolute;
+    top: 50%;
+    left: calc(100% + .5rem);
+    transform: translateY(-50%);
+    color: #404d4e;
+    font-size: 1.6em;
+    text-shadow: 1px 0 0 #58696a;
+    content: '&'; }
+
+.footer {
+  padding: 1rem;
+  font-size: .875em; }
+
+:root {
+  --content-background-color: #fff;
+  --content-text-color: #4c5b5c; }
+
+.content {
+  padding: 1rem;
+  background-color: var(--content-background-color);
+  color: var(--content-text-color); }
+
+.logo {
+  position: relative;
+  width: 50vw;
+  height: 0;
+  margin: 0 auto 2rem;
+  padding-top: 50vw;
+  border-radius: 50%;
+  overflow: hidden; }
+
+.logo__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: sepia(1) brightness(0.75); }
+
+:root {
+  --emphasize-text-color: #f8bb10; }
+
+.emphasize {
+  display: block;
+  color: var(--emphasize-text-color);
+  text-transform: uppercase; }

@@ -5,18 +5,22 @@
 * text=auto
 
 ## SOURCE CODE
-*.css      text
-*.html     text
-*.scss     text
+*.css  text
+*.html text
+*.js   text
+*.json text
+*.scss text
 
 ## DOCUMENTATION
-*.md         text
-*.txt        text
-LICENSE      text
-*README*     text
+*.md    text
+*.txt   text
+LICENSE text
+
+## TEMPLATES
+*.njk text
 
 ## LINTERS
-.stylelintrc  text
+.stylelintrc text
 
 ## CONFIGS
 .browserslistrc text
@@ -28,4 +32,4 @@ LICENSE      text
 *.yaml          text
 
 ## GRAPHICS
-*.png  binary
+*.png binary

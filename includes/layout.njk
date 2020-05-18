@@ -2,17 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="author" content="Kevin Van Den Haute">
 	<meta name="robots" content="index, follow">
 	<meta name="revisit-after" content="3 month">
 	<title>{{ title }}</title>
-	<link rel="icon" href="favicon.png" type="image/x-icon">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/klevr.css" type="text/css">
 </head>
 <body class="book">
-	<header class="header">
-		<h1 class="title" title="Kevin Van Den Haute">
-			<span class="emphasis">Kevin</span> Van Den Haute
+	<header class="book__header">
+		<picture class="logo">
+			<img src="img/logo-196x196.png" alt="" class="logo__image">
+		</picture>
+		<h1 class="book__title" title="Kevin Van Den Haute">
+			Kevin <span class="emphasize">Van Den Haute</span>
 		</h1>
 		<h2 class="subtitle">
 			freelance web developer<br>
@@ -33,7 +38,11 @@
 		{%- endfor -%}
 	</main>
 	<footer class="footer">
-		Kevin Van Den Haute bv - Grimbergsesteenweg 159c, 1980 Eppegem - RPR Brussel nr. 0535.934.403
+		<ul class="list">
+			<li class="list-item">Kevin Van Den Haute bv</li>
+			<li class="list-item">Grimbergsesteenweg 159c, 1980 Eppegen</li>
+			<li class="list-item">RPR Brussel nr. 0535.934.403</li>
+		</ul>
 	</footer>
 </body>
 </html>

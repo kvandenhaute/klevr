@@ -15,21 +15,31 @@ module.exports = function (eleventyConfig) {
 			});
 	});
 
-	eleventyConfig.addFilter('readableDate', dateObj => {
-		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('LLLL yyyy');
+	// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+	eleventyConfig.addFilter('datetime', date => {
+		return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat('yyyy-LL-dd');
 	});
 
-	// https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-	eleventyConfig.addFilter('datetime', (dateObj) => {
-		return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
+	eleventyConfig.addFilter('readableDate', date => {
+		return DateTime.fromJSDate(date, { zone: 'utc' }).toFormat('LLLL yyyy');
+	});
+
+	eleventyConfig.addFilter('sort', arr => {
+		return arr.sort(function (a, b) {
+			if (a.toLowerCase() > b.toLowerCase()) {
+				return 1;
+			} else if (b.toLowerCase() > a.toLowerCase()) {
+				return -1;
+			}
+
+			return 0;
+		});
 	});
 
 	return {
 		templateFormats: [
 			'md',
-			'njk',
-			'html',
-			'liquid'
+			'njk'
 		],
 
 		// If your site lives in a different subdirectory, change this.
@@ -43,7 +53,6 @@ module.exports = function (eleventyConfig) {
 		// pathPrefix: "/",
 
 		markdownTemplateEngine: 'njk',
-		htmlTemplateEngine: 'njk',
 		dataTemplateEngine: 'njk',
 
 		// These are all optional, defaults are shown:

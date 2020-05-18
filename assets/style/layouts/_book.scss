@@ -1,0 +1,71 @@
+@import '../mixins';
+
+:root {
+	--book-background-color: #4c5b5c;
+	--book-text-color: #e9e7da;
+}
+
+//@media screen and (min-width: 400px) {
+//	:root {
+//		--book-background-color: #47faf2;
+//	}
+//}
+
+.book {
+	background-color: var(--book-background-color);
+	color: var(--book-text-color);
+	font-family: var(--font-family-sans-serif);
+	font-size: 16px;
+	line-height: 1.5;
+
+	@include unsupported-landscape() {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/landscape-to-portrait.svg');
+		background-repeat: no-repeat;
+		background-position: 50%;
+		background-size: 25vh;
+	}
+}
+
+.book > * {
+	@include unsupported-landscape() {
+		display: none;
+	}
+}
+
+.book__header {
+	padding: 2rem;
+	text-align: center;
+}
+
+.book__title {
+	font-family: 'Open Sans Condensed', var(--font-family-sans-serif);
+	font-size: 10vw;
+	line-height: 1;
+	text-transform: lowercase;
+}
+
+.subtitle {
+	display: inline-block;
+	position: relative;
+	font-family: var(--font-family-monospace);
+	font-size: 4vw;
+	font-weight: 400;
+
+	&::after {
+		position: absolute;
+		top: 50%;
+		left: calc(100% + .5rem);
+		transform: translateY(-50%);
+		color: #404d4e;
+		font-size: 1.6em;
+		text-shadow: 1px 0 0 #58696a;
+		content: '&';
+	}
+}
+
+.footer {
+	padding: 1rem;
+	font-size: .875em;
+}

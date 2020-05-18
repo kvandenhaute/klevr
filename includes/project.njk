@@ -29,9 +29,9 @@
 	{{ project.templateContent | safe }}
 	<footer class="chapter__footer">
 		<ul class="list">
-			{%- for technology in project.data.keywords -%}
+			{%- for keyword in project.data.keywords | sort -%}
 				<li class="list-item">
-					<span class="tag tag--technology">{{ technology }}</span>
+					<span class="tag">{{ keyword }}</span>
 				</li>
 			{%- endfor -%}
 		</ul>

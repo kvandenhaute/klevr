@@ -1,0 +1,14 @@
+$bp-xs: 23.4375rem !default; // ~375px @ 16px
+$bp-sm: 48rem !default; // ~768px @ 16px
+
+@mixin mq($min-width: $bp-xs) {
+	@media screen and (min-width: $min-width) {
+		@content;
+	}
+}
+
+@mixin unsupported-landscape() {
+	@media only screen and (orientation: landscape) and (max-device-width: 812px) and (max-device-height: 414px) {
+		@content;
+	}
+}

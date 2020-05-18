@@ -1,0 +1,10 @@
+:root {
+	--content-background-color: #fff;
+	--content-text-color: #4c5b5c;
+}
+
+.content {
+	padding: 1rem;
+	background-color: var(--content-background-color);
+	color: var(--content-text-color);
+}
