@@ -3,6 +3,9 @@
 :root {
 	--book-background-color: #4c5b5c;
 	--book-text-color: #e9e7da;
+
+	--subtitle-color: #404d4e;
+	--subtitle-box-shadow-color: #58696a;
 }
 
 //@media screen and (min-width: 400px) {
@@ -10,6 +13,17 @@
 //		--book-background-color: #47faf2;
 //	}
 //}
+
+html {
+	margin: 0;
+	padding: 0;
+
+	@include unsupported-landscape() {
+		height: 100vh;
+		height: stretch;
+		overflow: hidden;
+	}
+}
 
 .book {
 	background-color: var(--book-background-color);
@@ -21,16 +35,14 @@
 	@include unsupported-landscape() {
 		position: relative;
 		height: 100vh;
-		background-image: url('../img/landscape-to-portrait.svg');
-		background-repeat: no-repeat;
-		background-position: 50%;
-		background-size: 25vh;
+		height: stretch;
 	}
 }
 
-.book > * {
+.book > *:not(:last-child) {
 	@include unsupported-landscape() {
 		display: none;
+		visibility: hidden;
 	}
 }
 
@@ -58,9 +70,9 @@
 		top: 50%;
 		left: calc(100% + .5rem);
 		transform: translateY(-50%);
-		color: #404d4e;
+		color: var(--subtitle-color);
 		font-size: 1.6em;
-		text-shadow: 1px 0 0 #58696a;
+		text-shadow: 1px 0 0 var(--subtitle-box-shadow-color);
 		content: '&';
 	}
 }

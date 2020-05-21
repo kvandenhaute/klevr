@@ -1,0 +1,15 @@
+@import '../mixins';
+
+.tags {
+	line-height: 1;
+}
+
+.tag {
+	padding: .1875em .375em;
+	border-radius: .25rem;
+	background-color: var(--section-title-color);
+	color: #fff;
+	font-size: .8125em;
+	font-variant: small-caps;
+	white-space: nowrap;
+}

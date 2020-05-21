@@ -9,9 +9,9 @@
 				<time datetime="{{ project.data.until | datetime }}" class="date">{{ project.data.until | readableDate }}</time>
 			{% endif %}
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			{{ project.data.name }}
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list">
 				{%- for function in project.data.function -%}
@@ -28,12 +28,14 @@
 	</header>
 	{{ project.templateContent | safe }}
 	<footer class="chapter__footer">
-		<ul class="list">
-			{%- for keyword in project.data.keywords | sort -%}
-				<li class="list-item">
-					<span class="tag">{{ keyword }}</span>
-				</li>
-			{%- endfor -%}
-		</ul>
+		<section class="tags">
+			<ul class="list list--inline">
+				{%- for keyword in project.data.keywords | sort -%}
+					<li class="list-item">
+						<span class="tag">{{ keyword }}</span>
+					</li>
+				{%- endfor -%}
+			</ul>
+		</section>
 	</footer>
 </article>

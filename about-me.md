@@ -1,6 +1,7 @@
 ---
 title: About me
 description: Me, myself & I
+key: about
 order: 1
 tags:
     - section

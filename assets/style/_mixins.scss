@@ -1,14 +1,34 @@
-$bp-xs: 23.4375rem !default; // ~375px @ 16px
-$bp-sm: 48rem !default; // ~768px @ 16px
+// based on https://gs.statcounter.com/screen-resolution-stats/mobile/belgium
 
-@mixin mq($min-width: $bp-xs) {
+$bp-phone--xs: 320px;
+$bp-phone--sm: 360px;
+$bp-phone--md: 375px;
+$bp-phone--lg: 412px;
+
+// based on https://gs.statcounter.com/screen-resolution-stats/tablet/belgium
+
+$bp-tablet--xs: 600px;
+$bp-tablet--sm: 768px;
+$bp-tablet--md: 834px;
+$bp-tablet--lg: 962px;
+
+// based on https://gs.statcounter.com/screen-resolution-stats/desktop/belgium
+
+$bp-desktop--xs: 1024px;
+$bp-desktop--sm: 1280px;
+$bp-desktop--md: 1440px;
+$bp-desktop--lg: 1600px;
+$bp-desktop--xl: 1920px;
+$bp-desktop--xxl: 2560px;
+
+@mixin mq($min-width: $bp-phone--xs) {
 	@media screen and (min-width: $min-width) {
 		@content;
 	}
 }
 
 @mixin unsupported-landscape() {
-	@media only screen and (orientation: landscape) and (max-device-width: 812px) and (max-device-height: 414px) {
+	@media only screen and (orientation: landscape) and (max-device-width: 818px) {
 		@content;
 	}
 }

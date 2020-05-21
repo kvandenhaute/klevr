@@ -3,8 +3,11 @@
 @import 'reset';
 @import 'typography';
 
+@import 'themes/default';
+@import 'components/components';
 @import 'layouts/book';
 @import 'layouts/content';
+@import 'layouts/landscape';
 @import 'modules/modules';
 
 :root {

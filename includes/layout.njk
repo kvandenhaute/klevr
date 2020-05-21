@@ -8,7 +8,9 @@
 	<meta name="revisit-after" content="3 month">
 	<title>{{ title }}</title>
 	<link rel="icon" href="img/favicon.png" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="css/klevr.css" type="text/css">
 </head>
 <body class="book">
@@ -26,14 +28,16 @@
 	</header>
 	<main class="content">
 		{%- for section in collections.sections -%}
-			<section class="section">
+			<section class="section{% if section.data.key %} section--{{ section.data.key }}{% endif %}">
 				<header class="section__header">
 					<h2 class="section__title">
 						{{ section.data.title }}
 					</h2>
-					<small class="section__description">{{ section.data.description }}</small>
+					<h3 class="section__subtitle">{{ section.data.description }}</h3>
 				</header>
-				{{ section.templateContent | safe }}
+				<div class="section__content">
+					{{ section.templateContent | safe }}
+				</div>
 			</section>
 		{%- endfor -%}
 	</main>
@@ -44,5 +48,6 @@
 			<li class="list-item">RPR Brussel nr. 0535.934.403</li>
 		</ul>
 	</footer>
+	<div class="landscape-to-portrait"></div>
 </body>
 </html>

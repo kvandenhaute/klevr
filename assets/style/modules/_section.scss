@@ -1,0 +1,99 @@
+@import '../mixins';
+
+:root {
+	--section-header-background-color: #fafafa;
+	--section-header-icon-color: #ddd;
+	--section-title-color: #e3655b;
+	--section-counter-color: #3891a6;
+}
+
+.section__header {
+	position: relative;
+	padding: 1rem;
+	border-top: 1px solid var(--border-color);
+	border-bottom: 1px solid var(--border-color);
+	background-color: var(--section-header-background-color);
+
+	&::after {
+		position: absolute;
+		top: 50%;
+		right: 1rem;
+		transform: translateY(-50%);
+		color: var(--section-header-icon-color);
+		font-size: 4.25em;
+	}
+
+	.section--about & {
+		@include icon('about', 'A', after);
+	}
+
+	.section--projects & {
+		@include icon('project', 'P', after) {
+			font-size: 3.6875em;
+		};
+	}
+
+	.section--skills & {
+		@include icon('code', 'S', after);
+	}
+
+	.section:first-child & {
+		border-top: 0;
+	}
+}
+
+.section__title {
+	margin-top: -.09375em;
+	color: var(--section-title-color);
+	font-size: 2em;
+	line-height: 1;
+}
+
+.section__subtitle {
+	margin-top: .325rem;
+	font-size: 1.125em;
+	font-weight: var(--title-font-weight);
+	line-height: 1;
+}
+
+.section__content {
+	padding: 1rem;
+
+	.section--expertise & {
+		counter-reset: expertise;
+	}
+}
+
+.section__content h3 {
+	font-size: 1.375em;
+	line-height: 1;
+
+	.section--expertise & {
+		counter-increment: expertise;
+
+		&::before {
+			display: inline-block;
+			box-sizing: content-box;
+			padding-right: 1rem;
+			color: var(--section-counter-color);
+			font-weight: var(--title-font-weight--normal);
+			letter-spacing: 1px;
+			text-align: center;
+			content: counters(expertise, '.', decimal-leading-zero);
+		}
+
+		@include mq($bp-phone--sm) {
+			&::before {
+				width: 1.5rem;
+			}
+		}
+	}
+}
+
+.section__content p {
+	.section--expertise & {
+		@include mq($bp-phone--sm) {
+			padding-left: 2.5rem;
+		}
+	}
+}

@@ -8,7 +8,9 @@
 	<meta name="revisit-after" content="3 month">
 	<title>Klevr - freelance webdeveloper</title>
 	<link rel="icon" href="img/favicon.png" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" media="print" onload="this.media='all'">
 	<link rel="stylesheet" href="css/klevr.css" type="text/css">
 </head>
 <body class="book">
@@ -24,14 +26,15 @@
 			frontend expert
 		</h2>
 	</header>
-	<main class="content"><section class="section">
+	<main class="content"><section class="section section--about">
 				<header class="section__header">
 					<h2 class="section__title">
 						About me
 					</h2>
-					<small class="section__description">Me, myself &amp; I</small>
+					<h3 class="section__subtitle">Me, myself &amp; I</h3>
 				</header>
-				<p>Hi, I'm Kevin. Passionate web developer, enthusiast LEGO builder (AFOL1), gadget freak and
+				<div class="section__content">
+					<p>Hi, I'm Kevin. Passionate web developer, enthusiast LEGO builder (AFOL1), gadget freak and
 occasionally sporty too. Happily maried, and living in the Brussels area.</p>
 <p>Since the age of 152 I'm passionated by the web. I had my first PC at the same age. It didn't
 take too long or I was building my first website in Microsoft FrontPage. Black background,
@@ -66,14 +69,16 @@ early to hire me for a React Native opportunity, or it must be that you can give
 the job to grow with it. I am a fast learner, and I have a great JavaScript background. It's
 totally up to you.</p>
 
-			</section><section class="section">
+				</div>
+			</section><section class="section section--expertise">
 				<header class="section__header">
 					<h2 class="section__title">
 						Expertise
 					</h2>
-					<small class="section__description">Batman would be jealous</small>
+					<h3 class="section__subtitle">Batman would be jealous</h3>
 				</header>
-				<h3>HTML &amp; CSS</h3>
+				<div class="section__content">
+					<h3>HTML &amp; CSS</h3>
 <p>Creating mobile first layouts using the BEM methodology and following the W3C standards. From simple layouts up to the most advanced ones using the latest techniques without forgetting about supporting the stupid not so smart browsers.</p>
 <h3>JavaScript</h3>
 <p>The less the better. My number one goal when building a website is to make everything work without JavaScript, and then enhance it. Progressive Enhancement. Make it performant, secure and clean. Make it work.</p>
@@ -88,26 +93,30 @@ totally up to you.</p>
 <h3>The Need for Speed</h3>
 <p>No, I don't mean the video game. Or the movie. Although I played the NFS video games a lot. What I really mean is the performance of websites. Use a properly configuration for delivering static resources, gzip, caching headers, … It's impressive how so little changes can have such a massive effect. Last time I checked this current site had a 97 speed score on Google PageSpeed, and that's without the critical CSS part that I'm working on. It can mean the difference between a visitor that left the site before it was loaded because he was on a bad connection, and that same visitor who becomes a client after a succesful page visit.</p>
 
-			</section><section class="section">
+				</div>
+			</section><section class="section section--skills">
 				<header class="section__header">
 					<h2 class="section__title">
 						Skills
 					</h2>
-					<small class="section__description">By the number</small>
+					<h3 class="section__subtitle">By the number</h3>
 				</header>
-				I'm not fond of judging my skills using a number from 1 to 10. I think it's really hard to do.
+				<div class="section__content">
+					I'm not fond of judging my skills using a number from 1 to 10. I think it's really hard to do.
 Can you ever be a 10? It depends on what you expect. In the next ratings a 10 means that if
 you give a problem in that specific area, I will be able to solve it if it can be solved. If
 I don't know it immediately I'm still able to find it.
 
-			</section><section class="section">
+				</div>
+			</section><section class="section section--projects">
 				<header class="section__header">
 					<h2 class="section__title">
 						Projects
 					</h2>
-					<small class="section__description">Yes, I&#39;ve been around</small>
+					<h3 class="section__subtitle">Yes, I&#39;ve been around</h3>
 				</header>
-				<ul class="list"><li class="list-item">
+				<div class="section__content">
+					<ul class="list"><li class="list-item">
             <article class="chapter">
 	<header class="chapter__header">
 		<div class="chapter__period">
@@ -117,9 +126,9 @@ I don't know it immediately I'm still able to find it.
 				<time datetime="2017-10-31" class="date">October 2017</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			HLN 2.0 mobile
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						Frontend Developer
@@ -132,35 +141,37 @@ I don't know it immediately I'm still able to find it.
 	<p>More information will follow at the end of the project.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">agile</span>
-				</li><li class="list-item">
-					<span class="tag">continuous integration</span>
-				</li><li class="list-item">
-					<span class="tag">CSS3</span>
-				</li><li class="list-item">
-					<span class="tag">git</span>
-				</li><li class="list-item">
-					<span class="tag">Gulp</span>
-				</li><li class="list-item">
-					<span class="tag">HTML5</span>
-				</li><li class="list-item">
-					<span class="tag">IntelliJ</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">Jenkins</span>
-				</li><li class="list-item">
-					<span class="tag">Jira</span>
-				</li><li class="list-item">
-					<span class="tag">mobile first</span>
-				</li><li class="list-item">
-					<span class="tag">progressive enhancement</span>
-				</li><li class="list-item">
-					<span class="tag">scrum</span>
-				</li><li class="list-item">
-					<span class="tag">tdd</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">agile</span>
+					</li><li class="list-item">
+						<span class="tag">continuous integration</span>
+					</li><li class="list-item">
+						<span class="tag">CSS3</span>
+					</li><li class="list-item">
+						<span class="tag">git</span>
+					</li><li class="list-item">
+						<span class="tag">Gulp</span>
+					</li><li class="list-item">
+						<span class="tag">HTML5</span>
+					</li><li class="list-item">
+						<span class="tag">IntelliJ</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">Jenkins</span>
+					</li><li class="list-item">
+						<span class="tag">Jira</span>
+					</li><li class="list-item">
+						<span class="tag">mobile first</span>
+					</li><li class="list-item">
+						<span class="tag">progressive enhancement</span>
+					</li><li class="list-item">
+						<span class="tag">scrum</span>
+					</li><li class="list-item">
+						<span class="tag">tdd</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
@@ -174,9 +185,9 @@ I don't know it immediately I'm still able to find it.
 				<time datetime="2017-10-31" class="date">October 2017</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			HLN 2.0 desktop
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						Frontend Developer
@@ -189,35 +200,37 @@ I don't know it immediately I'm still able to find it.
 	<p>More information will follow at the end of the project.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">agile</span>
-				</li><li class="list-item">
-					<span class="tag">continuous integration</span>
-				</li><li class="list-item">
-					<span class="tag">CSS3</span>
-				</li><li class="list-item">
-					<span class="tag">git</span>
-				</li><li class="list-item">
-					<span class="tag">Gulp</span>
-				</li><li class="list-item">
-					<span class="tag">HTML5</span>
-				</li><li class="list-item">
-					<span class="tag">IntelliJ</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">Jenkins</span>
-				</li><li class="list-item">
-					<span class="tag">Jira</span>
-				</li><li class="list-item">
-					<span class="tag">mobile first</span>
-				</li><li class="list-item">
-					<span class="tag">progressive enhancement</span>
-				</li><li class="list-item">
-					<span class="tag">scrum</span>
-				</li><li class="list-item">
-					<span class="tag">tdd</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">agile</span>
+					</li><li class="list-item">
+						<span class="tag">continuous integration</span>
+					</li><li class="list-item">
+						<span class="tag">CSS3</span>
+					</li><li class="list-item">
+						<span class="tag">git</span>
+					</li><li class="list-item">
+						<span class="tag">Gulp</span>
+					</li><li class="list-item">
+						<span class="tag">HTML5</span>
+					</li><li class="list-item">
+						<span class="tag">IntelliJ</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">Jenkins</span>
+					</li><li class="list-item">
+						<span class="tag">Jira</span>
+					</li><li class="list-item">
+						<span class="tag">mobile first</span>
+					</li><li class="list-item">
+						<span class="tag">progressive enhancement</span>
+					</li><li class="list-item">
+						<span class="tag">scrum</span>
+					</li><li class="list-item">
+						<span class="tag">tdd</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
@@ -231,9 +244,9 @@ I don't know it immediately I'm still able to find it.
 				<time datetime="2016-01-05" class="date">January 2016</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			HLN Plus
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						Frontend Developer
@@ -246,35 +259,37 @@ I don't know it immediately I'm still able to find it.
 	<p>More information will follow at the end of the project.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">agile</span>
-				</li><li class="list-item">
-					<span class="tag">continuous integration</span>
-				</li><li class="list-item">
-					<span class="tag">CSS3</span>
-				</li><li class="list-item">
-					<span class="tag">git</span>
-				</li><li class="list-item">
-					<span class="tag">Gulp</span>
-				</li><li class="list-item">
-					<span class="tag">HTML5</span>
-				</li><li class="list-item">
-					<span class="tag">IntelliJ</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">Jenkins</span>
-				</li><li class="list-item">
-					<span class="tag">Jira</span>
-				</li><li class="list-item">
-					<span class="tag">mobile first</span>
-				</li><li class="list-item">
-					<span class="tag">progressive enhancement</span>
-				</li><li class="list-item">
-					<span class="tag">scrum</span>
-				</li><li class="list-item">
-					<span class="tag">tdd</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">agile</span>
+					</li><li class="list-item">
+						<span class="tag">continuous integration</span>
+					</li><li class="list-item">
+						<span class="tag">CSS3</span>
+					</li><li class="list-item">
+						<span class="tag">git</span>
+					</li><li class="list-item">
+						<span class="tag">Gulp</span>
+					</li><li class="list-item">
+						<span class="tag">HTML5</span>
+					</li><li class="list-item">
+						<span class="tag">IntelliJ</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">Jenkins</span>
+					</li><li class="list-item">
+						<span class="tag">Jira</span>
+					</li><li class="list-item">
+						<span class="tag">mobile first</span>
+					</li><li class="list-item">
+						<span class="tag">progressive enhancement</span>
+					</li><li class="list-item">
+						<span class="tag">scrum</span>
+					</li><li class="list-item">
+						<span class="tag">tdd</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
@@ -288,9 +303,9 @@ I don't know it immediately I'm still able to find it.
 				<time datetime="2015-06-04" class="date">June 2015</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			Web Maintenance
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						Frontend Developer
@@ -306,39 +321,41 @@ Occasionally new features were implemented like Napoleon Games, FIFA World Cup 2
 But most of the time it was fixing existing bugs and refactor code to prevent production issues.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">agile</span>
-				</li><li class="list-item">
-					<span class="tag">CSS2</span>
-				</li><li class="list-item">
-					<span class="tag">git</span>
-				</li><li class="list-item">
-					<span class="tag">Grunt</span>
-				</li><li class="list-item">
-					<span class="tag">HTML4</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">Jenkins</span>
-				</li><li class="list-item">
-					<span class="tag">Jira</span>
-				</li><li class="list-item">
-					<span class="tag">jQuery</span>
-				</li><li class="list-item">
-					<span class="tag">JSP</span>
-				</li><li class="list-item">
-					<span class="tag">LESS</span>
-				</li><li class="list-item">
-					<span class="tag">scrum</span>
-				</li><li class="list-item">
-					<span class="tag">Sublime Text 2</span>
-				</li><li class="list-item">
-					<span class="tag">Subversion</span>
-				</li><li class="list-item">
-					<span class="tag">XML</span>
-				</li><li class="list-item">
-					<span class="tag">XSLT</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">agile</span>
+					</li><li class="list-item">
+						<span class="tag">CSS2</span>
+					</li><li class="list-item">
+						<span class="tag">git</span>
+					</li><li class="list-item">
+						<span class="tag">Grunt</span>
+					</li><li class="list-item">
+						<span class="tag">HTML4</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">Jenkins</span>
+					</li><li class="list-item">
+						<span class="tag">Jira</span>
+					</li><li class="list-item">
+						<span class="tag">jQuery</span>
+					</li><li class="list-item">
+						<span class="tag">JSP</span>
+					</li><li class="list-item">
+						<span class="tag">LESS</span>
+					</li><li class="list-item">
+						<span class="tag">scrum</span>
+					</li><li class="list-item">
+						<span class="tag">Sublime Text 2</span>
+					</li><li class="list-item">
+						<span class="tag">Subversion</span>
+					</li><li class="list-item">
+						<span class="tag">XML</span>
+					</li><li class="list-item">
+						<span class="tag">XSLT</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
@@ -352,9 +369,9 @@ But most of the time it was fixing existing bugs and refactor code to prevent pr
 				<time datetime="2014-03-31" class="date">March 2014</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			Mediargus
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						PHP Developer
@@ -371,27 +388,29 @@ newspapers, magazines, … The platform is writen in PHP and uses XSLT and CSS t
 content to the customers.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">CSS3</span>
-				</li><li class="list-item">
-					<span class="tag">HTML4</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">jQuery</span>
-				</li><li class="list-item">
-					<span class="tag">MySQL</span>
-				</li><li class="list-item">
-					<span class="tag">Netbeans</span>
-				</li><li class="list-item">
-					<span class="tag">PHP5</span>
-				</li><li class="list-item">
-					<span class="tag">Subversion</span>
-				</li><li class="list-item">
-					<span class="tag">XML</span>
-				</li><li class="list-item">
-					<span class="tag">XSLT</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">CSS3</span>
+					</li><li class="list-item">
+						<span class="tag">HTML4</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">jQuery</span>
+					</li><li class="list-item">
+						<span class="tag">MySQL</span>
+					</li><li class="list-item">
+						<span class="tag">Netbeans</span>
+					</li><li class="list-item">
+						<span class="tag">PHP5</span>
+					</li><li class="list-item">
+						<span class="tag">Subversion</span>
+					</li><li class="list-item">
+						<span class="tag">XML</span>
+					</li><li class="list-item">
+						<span class="tag">XSLT</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
@@ -405,9 +424,9 @@ content to the customers.</p>
 				<time datetime="2013-08-31" class="date">August 2013</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			Pest Control CMS
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						PHP Developer
@@ -429,35 +448,37 @@ Twitter Bootstrap, some jQuery magic and an integration with Outlook to update t
 controllers calendars. They even won an award with it from the city of Gent.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">agile</span>
-				</li><li class="list-item">
-					<span class="tag">CSS3</span>
-				</li><li class="list-item">
-					<span class="tag">git</span>
-				</li><li class="list-item">
-					<span class="tag">HTML5</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">jQuery</span>
-				</li><li class="list-item">
-					<span class="tag">LESS</span>
-				</li><li class="list-item">
-					<span class="tag">mobile first</span>
-				</li><li class="list-item">
-					<span class="tag">Modernizr</span>
-				</li><li class="list-item">
-					<span class="tag">MySQL</span>
-				</li><li class="list-item">
-					<span class="tag">Netbeans</span>
-				</li><li class="list-item">
-					<span class="tag">PHP5</span>
-				</li><li class="list-item">
-					<span class="tag">Symfony 2</span>
-				</li><li class="list-item">
-					<span class="tag">Twitter Bootstrap</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">agile</span>
+					</li><li class="list-item">
+						<span class="tag">CSS3</span>
+					</li><li class="list-item">
+						<span class="tag">git</span>
+					</li><li class="list-item">
+						<span class="tag">HTML5</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">jQuery</span>
+					</li><li class="list-item">
+						<span class="tag">LESS</span>
+					</li><li class="list-item">
+						<span class="tag">mobile first</span>
+					</li><li class="list-item">
+						<span class="tag">Modernizr</span>
+					</li><li class="list-item">
+						<span class="tag">MySQL</span>
+					</li><li class="list-item">
+						<span class="tag">Netbeans</span>
+					</li><li class="list-item">
+						<span class="tag">PHP5</span>
+					</li><li class="list-item">
+						<span class="tag">Symfony 2</span>
+					</li><li class="list-item">
+						<span class="tag">Twitter Bootstrap</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
@@ -471,9 +492,9 @@ controllers calendars. They even won an award with it from the city of Gent.</p>
 				<time datetime="2013-06-30" class="date">June 2013</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			Diebold
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						JavaScript Developer
@@ -491,21 +512,23 @@ not on the framework. For some changes I had to use my HTML and CSS skills too, 
 basic.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">CSS2.1</span>
-				</li><li class="list-item">
-					<span class="tag">Eclipse</span>
-				</li><li class="list-item">
-					<span class="tag">HTML4</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">MySQL</span>
-				</li><li class="list-item">
-					<span class="tag">PHP5</span>
-				</li><li class="list-item">
-					<span class="tag">Subversion</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">CSS2.1</span>
+					</li><li class="list-item">
+						<span class="tag">Eclipse</span>
+					</li><li class="list-item">
+						<span class="tag">HTML4</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">MySQL</span>
+					</li><li class="list-item">
+						<span class="tag">PHP5</span>
+					</li><li class="list-item">
+						<span class="tag">Subversion</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
@@ -519,9 +542,9 @@ basic.</p>
 				<time datetime="2012-08-31" class="date">August 2012</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			Keytrade Bank
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						PHP Developer
@@ -541,31 +564,33 @@ visual part of the websites. So HTML, CSS and JavaScript was also part of the jo
 wonderful time at Keytrade Bank and I still have contact with some ex-coworkers.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">CSS2.1</span>
-				</li><li class="list-item">
-					<span class="tag">CSS3</span>
-				</li><li class="list-item">
-					<span class="tag">git</span>
-				</li><li class="list-item">
-					<span class="tag">HTML4</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">MSSQL</span>
-				</li><li class="list-item">
-					<span class="tag">MySQL</span>
-				</li><li class="list-item">
-					<span class="tag">Netbeans</span>
-				</li><li class="list-item">
-					<span class="tag">PHP4</span>
-				</li><li class="list-item">
-					<span class="tag">PHP5</span>
-				</li><li class="list-item">
-					<span class="tag">Subversion</span>
-				</li><li class="list-item">
-					<span class="tag">Twitter Bootstrap</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">CSS2.1</span>
+					</li><li class="list-item">
+						<span class="tag">CSS3</span>
+					</li><li class="list-item">
+						<span class="tag">git</span>
+					</li><li class="list-item">
+						<span class="tag">HTML4</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">MSSQL</span>
+					</li><li class="list-item">
+						<span class="tag">MySQL</span>
+					</li><li class="list-item">
+						<span class="tag">Netbeans</span>
+					</li><li class="list-item">
+						<span class="tag">PHP4</span>
+					</li><li class="list-item">
+						<span class="tag">PHP5</span>
+					</li><li class="list-item">
+						<span class="tag">Subversion</span>
+					</li><li class="list-item">
+						<span class="tag">Twitter Bootstrap</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
@@ -579,9 +604,9 @@ wonderful time at Keytrade Bank and I still have contact with some ex-coworkers.
 				<time datetime="2009-06-14" class="date">June 2009</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			KBC Bank
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						Java Developer
@@ -596,29 +621,31 @@ maintaining existing and creating new functionalities. The engine behind those a
 Java in combination with an Oracle database.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">CSS2.1</span>
-				</li><li class="list-item">
-					<span class="tag">Documentum</span>
-				</li><li class="list-item">
-					<span class="tag">Eclipse</span>
-				</li><li class="list-item">
-					<span class="tag">HTML4</span>
-				</li><li class="list-item">
-					<span class="tag">Java</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">JSP</span>
-				</li><li class="list-item">
-					<span class="tag">PL/SQL</span>
-				</li><li class="list-item">
-					<span class="tag">Subversion</span>
-				</li><li class="list-item">
-					<span class="tag">XML</span>
-				</li><li class="list-item">
-					<span class="tag">XSLT</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">CSS2.1</span>
+					</li><li class="list-item">
+						<span class="tag">Documentum</span>
+					</li><li class="list-item">
+						<span class="tag">Eclipse</span>
+					</li><li class="list-item">
+						<span class="tag">HTML4</span>
+					</li><li class="list-item">
+						<span class="tag">Java</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">JSP</span>
+					</li><li class="list-item">
+						<span class="tag">PL/SQL</span>
+					</li><li class="list-item">
+						<span class="tag">Subversion</span>
+					</li><li class="list-item">
+						<span class="tag">XML</span>
+					</li><li class="list-item">
+						<span class="tag">XSLT</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
@@ -632,9 +659,9 @@ Java in combination with an Oracle database.</p>
 				<time datetime="2007-10-12" class="date">October 2007</time>
 			
 		</div>
-		<h3 class="chapter__title">
+		<h4 class="chapter__title">
 			Develop-it
-		</h3>
+		</h4>
 		<div class="chapter__hmz">
 			<ul class="list"><li class="list-item">
 						PHP Developer
@@ -653,52 +680,57 @@ learning material). Both use PHP as main scripting language. Sometimes I had to 
 Moodle, Joomla or Mambo.</p>
 
 	<footer class="chapter__footer">
-		<ul class="list"><li class="list-item">
-					<span class="tag">CSS2.1</span>
-				</li><li class="list-item">
-					<span class="tag">Dokeos</span>
-				</li><li class="list-item">
-					<span class="tag">HTML4</span>
-				</li><li class="list-item">
-					<span class="tag">JavaScript</span>
-				</li><li class="list-item">
-					<span class="tag">Joomla</span>
-				</li><li class="list-item">
-					<span class="tag">jQuery</span>
-				</li><li class="list-item">
-					<span class="tag">jQueryUI</span>
-				</li><li class="list-item">
-					<span class="tag">Mambo</span>
-				</li><li class="list-item">
-					<span class="tag">Moodle</span>
-				</li><li class="list-item">
-					<span class="tag">Netbeans</span>
-				</li><li class="list-item">
-					<span class="tag">PHP4</span>
-				</li><li class="list-item">
-					<span class="tag">PHP5</span>
-				</li><li class="list-item">
-					<span class="tag">prototype.js</span>
-				</li><li class="list-item">
-					<span class="tag">script.aculo.us</span>
-				</li><li class="list-item">
-					<span class="tag">Smarty</span>
-				</li><li class="list-item">
-					<span class="tag">Subversion</span>
-				</li></ul>
+		<section class="tags">
+			<ul class="list list--inline"><li class="list-item">
+						<span class="tag">CSS2.1</span>
+					</li><li class="list-item">
+						<span class="tag">Dokeos</span>
+					</li><li class="list-item">
+						<span class="tag">HTML4</span>
+					</li><li class="list-item">
+						<span class="tag">JavaScript</span>
+					</li><li class="list-item">
+						<span class="tag">Joomla</span>
+					</li><li class="list-item">
+						<span class="tag">jQuery</span>
+					</li><li class="list-item">
+						<span class="tag">jQueryUI</span>
+					</li><li class="list-item">
+						<span class="tag">Mambo</span>
+					</li><li class="list-item">
+						<span class="tag">Moodle</span>
+					</li><li class="list-item">
+						<span class="tag">Netbeans</span>
+					</li><li class="list-item">
+						<span class="tag">PHP4</span>
+					</li><li class="list-item">
+						<span class="tag">PHP5</span>
+					</li><li class="list-item">
+						<span class="tag">prototype.js</span>
+					</li><li class="list-item">
+						<span class="tag">script.aculo.us</span>
+					</li><li class="list-item">
+						<span class="tag">Smarty</span>
+					</li><li class="list-item">
+						<span class="tag">Subversion</span>
+					</li></ul>
+		</section>
 	</footer>
 </article>
 
         </li></ul>
 
-			</section><section class="section">
+				</div>
+			</section><section class="section section--education">
 				<header class="section__header">
 					<h2 class="section__title">
 						Education
 					</h2>
-					<small class="section__description">You won&#39;t say, but I&#39;m educated</small>
+					<h3 class="section__subtitle">You won&#39;t say, but I&#39;m educated</h3>
 				</header>
-				
+				<div class="section__content">
+					
+				</div>
 			</section></main>
 	<footer class="footer">
 		<ul class="list">
@@ -707,5 +739,6 @@ Moodle, Joomla or Mambo.</p>
 			<li class="list-item">RPR Brussel nr. 0535.934.403</li>
 		</ul>
 	</footer>
+	<div class="landscape-to-portrait"></div>
 </body>
 </html>

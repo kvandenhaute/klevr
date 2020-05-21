@@ -1,0 +1,10 @@
+breakOnError: false
+css:
+  compress: false
+  lint: true
+html:
+  compress: false
+  lint: true
+images:
+  compress: false
+  optimize: false
