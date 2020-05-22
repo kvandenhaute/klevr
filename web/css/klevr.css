@@ -29,7 +29,7 @@ img {
   margin: 0 auto; }
 
 @font-face {
-  font-family: 'icons';
+  font-family: "icons";
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff"); }
@@ -37,7 +37,7 @@ img {
 :root {
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  --font-family-icons: $icon-font-name;
+  --font-family-icons: icons;
   --title-font-family: 'Open Sans Condensed', var(--font-family-sans-serif);
   --title-font-weight--normal: 300;
   --title-font-weight--bold: 700; }
@@ -181,20 +181,51 @@ html {
 .book__header {
   padding: 2rem;
   text-align: center; }
+  @media screen and (min-width: 768px) {
+    .book__header {
+      position: relative;
+      height: 300px;
+      margin-left: 200px;
+      padding-left: 1rem;
+      text-align: left; } }
 
 .book__title {
   font-family: "Open Sans Condensed", var(--font-family-sans-serif);
   font-size: 10vw;
   line-height: 1;
   text-transform: lowercase; }
+  @media screen and (min-width: 768px) {
+    .book__title {
+      position: absolute;
+      right: 2rem;
+      bottom: 50%;
+      left: 1rem;
+      padding-bottom: .5rem;
+      font-size: 3.5em; }
+      .book__title::before {
+        position: absolute;
+        right: -1rem;
+        bottom: -3px;
+        left: -200px;
+        height: 1px;
+        background-color: var(--emphasize-text-color);
+        content: ''; }
+      .book__title::after {
+        position: absolute;
+        right: -1rem;
+        bottom: 0;
+        left: -200px;
+        height: 1px;
+        background-color: var(--book-text-color);
+        content: ''; } }
 
-.subtitle {
+.book__subtitle {
   display: inline-block;
   position: relative;
   font-family: var(--font-family-monospace);
   font-size: 4vw;
   font-weight: 400; }
-  .subtitle::after {
+  .book__subtitle::after {
     position: absolute;
     top: 50%;
     left: calc(100% + .5rem);
@@ -204,6 +235,13 @@ html {
     font-size: 1.6em;
     text-shadow: 1px 0 0 var(--subtitle-box-shadow-color);
     content: '&'; }
+  @media screen and (min-width: 768px) {
+    .book__subtitle {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      margin-top: .5rem;
+      font-size: 1.4375em; } }
 
 .footer {
   padding: 1rem;
@@ -246,11 +284,22 @@ html {
 .logo {
   position: relative;
   width: 50vw;
-  height: 0;
+  height: 50vw;
   margin: 0 auto 2rem;
-  padding-top: 50vw;
   border-radius: 50%;
   overflow: hidden; }
+  @media screen and (min-width: 768px) {
+    .logo {
+      position: absolute;
+      top: 50%;
+      left: calc(-160px + .5rem);
+      width: 120px;
+      height: 120px;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      border: 2px solid var(--book-background-color);
+      border-radius: 25%;
+      z-index: 1; } }
 
 .logo__image {
   position: absolute;
@@ -267,6 +316,13 @@ html {
   --section-title-color: #e3655b;
   --section-counter-color: #3891a6; }
 
+@media screen and (min-width: 768px) {
+  .section {
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    justify-content: flex-start; } }
+
 .section__header {
   position: relative;
   padding: 1rem;
@@ -281,6 +337,14 @@ html {
             transform: translateY(-50%);
     color: var(--section-header-icon-color);
     font-size: 4.25em; }
+  @media screen and (min-width: 768px) {
+    .section__header {
+      flex: 200px 0 0;
+      border-top: 0;
+      border-bottom: 0;
+      text-align: right; }
+      .section__header::after {
+        display: none; } }
   .section--about .section__header:after {
     font-family: "icons", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -335,6 +399,9 @@ html {
 
 .section__content {
   padding: 1rem; }
+  @media screen and (min-width: 768px) {
+    .section--about .section__content {
+      padding-top: 23px; } }
   .section--expertise .section__content {
     counter-reset: expertise; }
 
@@ -355,10 +422,17 @@ html {
     @media screen and (min-width: 360px) {
       .section--expertise .section__content h3::before {
         width: 1.5rem; } }
+    @media screen and (min-width: 768px) {
+      .section--expertise .section__content h3:first-child {
+        margin-top: 5px; } }
 
 @media screen and (min-width: 360px) {
   .section--expertise .section__content p {
     padding-left: 2.5rem; } }
+
+@media screen and (min-width: 768px) {
+  .section--expertise .section__content p {
+    padding-left: 0; } }
 
 .tags {
   line-height: 1; }

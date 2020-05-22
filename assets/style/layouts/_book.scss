@@ -49,6 +49,14 @@ html {
 .book__header {
 	padding: 2rem;
 	text-align: center;
+
+	@include mq($bp-tablet--sm) {
+		position: relative;
+		height: 300px;
+		margin-left: 200px;
+		padding-left: 1rem;
+		text-align: left;
+	}
 }
 
 .book__title {
@@ -56,9 +64,38 @@ html {
 	font-size: 10vw;
 	line-height: 1;
 	text-transform: lowercase;
+
+	@include mq($bp-tablet--sm) {
+		position: absolute;
+		right: 2rem;
+		bottom: 50%;
+		left: 1rem;
+		padding-bottom: .5rem;
+		font-size: 3.5em;
+
+		&::before {
+			position: absolute;
+			right: -1rem;
+			bottom: -3px;
+			left: -200px;
+			height: 1px;
+			background-color: var(--emphasize-text-color);
+			content: '';
+		}
+
+		&::after {
+			position: absolute;
+			right: -1rem;
+			bottom: 0;
+			left: -200px;
+			height: 1px;
+			background-color: var(--book-text-color);
+			content: '';
+		}
+	}
 }
 
-.subtitle {
+.book__subtitle {
 	display: inline-block;
 	position: relative;
 	font-family: var(--font-family-monospace);
@@ -74,6 +111,14 @@ html {
 		font-size: 1.6em;
 		text-shadow: 1px 0 0 var(--subtitle-box-shadow-color);
 		content: '&';
+	}
+
+	@include mq($bp-tablet--sm) {
+		position: absolute;
+		top: 50%;
+		left: 1rem;
+		margin-top: .5rem;
+		font-size: 1.4375em;
 	}
 }
 
