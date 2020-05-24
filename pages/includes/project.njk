@@ -12,24 +12,20 @@
 		<h4 class="chapter__title">
 			{{ project.data.name }}
 		</h4>
-		<div class="chapter__hmz">
+		<div class="chapter__description">
 			<ul class="list">
 				{%- for function in project.data.function -%}
-					<li class="list-item">
-						{{ function }}
-					</li>
+					<li class="list-item">{{ function }}</li>
 				{%- endfor -%}
 
-				<li class="list-item">
-					{{ project.data.client }}
-				</li>
+				<li class="list-item">{{ project.data.client }}</li>
 			</ul>
 		</div>
 	</header>
 	{{ project.templateContent | safe }}
 	<footer class="chapter__footer">
 		<section class="tags">
-			<ul class="list list--inline">
+			<ul class="list">
 				{%- for keyword in project.data.keywords | sort -%}
 					<li class="list-item">
 						<span class="tag">{{ keyword }}</span>

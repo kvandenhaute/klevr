@@ -1,0 +1,30 @@
+@import '../typography';
+
+.chapter {
+	p {
+		margin-top: .5rem;
+
+		& + & {
+			margin-top: .25em;
+		}
+	}
+}
+
+.chapter__description {
+	margin-top: .25rem;
+	font-family: $opensanscondensed;
+	font-size: 1.25em;
+	font-weight: $opensanscondensed--normal;
+	line-height: 1.25;
+}
+
+.chapter__period {
+	font-size: .625em;
+	line-height: 1;
+}
+
+.chapter__title {
+	margin-top: .3125rem;
+	font-size: 1.375em;
+	line-height: 1;
+}

@@ -6,9 +6,9 @@ order: 4
 tags:
     - section
 ---
-<ul class="list">
+<ul class="timeline">
     {%- for project in collections.project -%}
-        <li class="list-item">
+        <li class="timeline__event">
             {% include "project.njk" %}
         </li>
     {%- endfor -%}

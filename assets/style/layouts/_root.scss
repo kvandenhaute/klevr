@@ -1,0 +1,9 @@
+@import '../mixins';
+
+html {
+	@include unsupported-landscape() {
+		height: 100vh;
+		height: stretch;
+		overflow: hidden;
+	}
+}

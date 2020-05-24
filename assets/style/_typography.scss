@@ -1,20 +1,8 @@
 @import 'fonts/icons';
 
-:root {
-	--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-	--font-family-icons: #{$icon-font-name};
-	--title-font-family: 'Open Sans Condensed', var(--font-family-sans-serif);
-	--title-font-weight--normal: 300;
-	--title-font-weight--bold: 700;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: var(--title-font-family);
-	font-weight: var(--title-font-weight--bold);
-}
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$font-family-icons: $icon-font-name;
+$opensanscondensed: 'Open Sans Condensed', $font-family-sans-serif;
+$opensanscondensed--normal: 300;
+$opensanscondensed--bold: 700;

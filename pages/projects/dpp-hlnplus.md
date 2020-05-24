@@ -1,6 +1,6 @@
 ---
 name: HLN Plus
-client: De Persgroep Publishing N.V.
+client: DPG Media nv
 function:
     - Frontend Developer
 from: 2015-06-01
@@ -11,7 +11,7 @@ keywords:
     - CSS3
     - mobile first
     - progressive enhancement
-    - agile
+    - Agile
     - continuous integration
     - scrum
     - tdd

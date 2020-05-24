@@ -1,32 +1,44 @@
-$list-item-inline-margin--horizontal: .25rem;
-$list-item-inline-margin--vertical: $list-item-inline-margin--horizontal;
-
-$tags-list-item-inline-margin--vertical: $list-item-inline-margin--horizontal * 1.5;
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
 
 .list {
-	margin-top: 0;
-
-	&--inline {
+	.chapter__description & {
 		display: flex;
-		flex-direction: row;
 		flex-wrap: wrap;
-		max-width: calc(100% + #{$list-item-inline-margin--horizontal * 2});
-		margin: 1rem - $list-item-inline-margin--vertical 0 - $list-item-inline-margin--horizontal;
-		padding-left: 0;
-		list-style-type: none;
+	}
 
-		.tags & {
-			margin: 1rem - $tags-list-item-inline-margin--vertical 0 - $list-item-inline-margin--horizontal;
-		}
+	.tags & {
+		display: flex;
+		flex-wrap: wrap;
+		margin: .75rem 0 - .125rem 0;
 	}
 }
 
 .list-item {
-	.list--inline & {
-		margin: $list-item-inline-margin--vertical $list-item-inline-margin--horizontal;
+	.chapter__description & {
+		margin-right: .25em;
 
-		.tags & {
-			margin: $tags-list-item-inline-margin--vertical $list-item-inline-margin--horizontal;
+		&::after {
+			content: ' /';
 		}
+
+		&:nth-last-child(2)::after {
+			content: ',';
+		}
+
+		&:last-child {
+			margin-right: 0;
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	.tags & {
+		margin: .3125rem .125rem;
 	}
 }

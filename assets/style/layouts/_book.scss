@@ -1,34 +1,20 @@
 @import '../mixins';
+@import '../typography';
 
 :root {
 	--book-background-color: #4c5b5c;
 	--book-text-color: #e9e7da;
 
-	--subtitle-color: #404d4e;
-	--subtitle-box-shadow-color: #58696a;
-}
+	--book-header-border-color: var(--accent-color);
 
-//@media screen and (min-width: 400px) {
-//	:root {
-//		--book-background-color: #47faf2;
-//	}
-//}
-
-html {
-	margin: 0;
-	padding: 0;
-
-	@include unsupported-landscape() {
-		height: 100vh;
-		height: stretch;
-		overflow: hidden;
-	}
+	--book-subtitle-color: #404d4e;
+	--book-subtitle-box-shadow-color: #58696a;
 }
 
 .book {
 	background-color: var(--book-background-color);
 	color: var(--book-text-color);
-	font-family: var(--font-family-sans-serif);
+	font-family: $font-family-sans-serif;
 	font-size: 16px;
 	line-height: 1.5;
 
@@ -48,6 +34,7 @@ html {
 
 .book__header {
 	padding: 2rem;
+	border-bottom: 2px solid var(--book-header-border-color);
 	text-align: center;
 
 	@include mq($bp-tablet--sm) {
@@ -60,7 +47,6 @@ html {
 }
 
 .book__title {
-	font-family: 'Open Sans Condensed', var(--font-family-sans-serif);
 	font-size: 10vw;
 	line-height: 1;
 	text-transform: lowercase;
@@ -98,7 +84,7 @@ html {
 .book__subtitle {
 	display: inline-block;
 	position: relative;
-	font-family: var(--font-family-monospace);
+	font-family: $font-family-monospace;
 	font-size: 4vw;
 	font-weight: 400;
 
@@ -107,9 +93,9 @@ html {
 		top: 50%;
 		left: calc(100% + .5rem);
 		transform: translateY(-50%);
-		color: var(--subtitle-color);
+		color: var(--book-subtitle-color);
 		font-size: 1.6em;
-		text-shadow: 1px 0 0 var(--subtitle-box-shadow-color);
+		text-shadow: 1px 0 0 var(--book-subtitle-box-shadow-color);
 		content: '&';
 	}
 
@@ -122,7 +108,10 @@ html {
 	}
 }
 
-.footer {
+.book__footer {
 	padding: 1rem;
-	font-size: .875em;
+	font-family: $opensanscondensed;
+	font-size: 1.25em;
+	font-weight: $opensanscondensed--normal;
+	text-align: center;
 }

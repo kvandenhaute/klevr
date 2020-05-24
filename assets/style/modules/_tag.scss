@@ -1,4 +1,10 @@
 @import '../mixins';
+@import '../typography';
+
+:root {
+	--tag-background-color: #f0f0f0;
+	--tag-text-color: #111;
+}
 
 .tags {
 	line-height: 1;
@@ -7,9 +13,9 @@
 .tag {
 	padding: .1875em .375em;
 	border-radius: .25rem;
-	background-color: var(--section-title-color);
-	color: #fff;
+	background-color: var(--tag-background-color);
+	color: var(--tag-text-color);
+	font-family: $font-family-monospace;
 	font-size: .8125em;
-	font-variant: small-caps;
 	white-space: nowrap;
 }

@@ -1,21 +1,8 @@
 @charset "UTF-8";
 
 @import 'reset';
-@import 'typography';
 
 @import 'themes/default';
 @import 'components/components';
-@import 'layouts/book';
-@import 'layouts/content';
-@import 'layouts/landscape';
+@import 'layouts/layouts';
 @import 'modules/modules';
-
-:root {
-	--emphasize-text-color: #f8bb10;
-}
-
-.emphasize {
-	display: block;
-	color: var(--emphasize-text-color);
-	text-transform: uppercase;
-}

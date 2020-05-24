@@ -13,7 +13,7 @@ keywords:
     - JavaScript
     - CSS3
     - mobile first
-    - agile
+    - Agile
     - Symfony 2
     - jQuery
     - Modernizr

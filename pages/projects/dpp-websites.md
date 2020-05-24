@@ -1,6 +1,6 @@
 ---
 name: Web Maintenance
-client: De Persgroep Publishing N.V.
+client: DPG Media nv
 function:
     - Frontend Developer
 from: 2014-04-01
@@ -14,7 +14,7 @@ keywords:
     - JSP
     - XML
     - XSLT
-    - agile
+    - Agile
     - scrum
     - git
     - Grunt

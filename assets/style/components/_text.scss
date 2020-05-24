@@ -1,3 +1,7 @@
+:root {
+	--emphasize-text-color: var(--accent-color);
+}
+
 h1,
 h2,
 h3,
@@ -9,4 +13,10 @@ p {
 	& + & {
 		margin-top: 1em;
 	}
+}
+
+.emphasize {
+	display: block;
+	color: var(--emphasize-text-color);
+	text-transform: uppercase;
 }

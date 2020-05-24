@@ -1,0 +1,17 @@
+<article class="chapter">
+	<header class="chapter__header">
+		<div class="chapter__period">
+			<time datetime="{{ education.data.from | datetime }}" class="date">{{ education.data.from | readableDate }}</time> -
+			<time datetime="{{ education.data.until | datetime }}" class="date">{{ education.data.until | readableDate }}</time>
+		</div>
+		<h4 class="chapter__title">
+			{{ education.data.course }}
+		</h4>
+		<div class="chapter__description">
+			<ul class="list">
+				<li class="list-item">{{ education.data.school }}</li>
+			</ul>
+		</div>
+	</header>
+	{{ education.templateContent | safe }}
+</article>

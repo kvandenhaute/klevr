@@ -1,0 +1,15 @@
+---
+title: Education
+description: You won't say, but I'm educated
+key: education
+order: 5
+tags:
+    - section
+---
+<ul class="timeline">
+    {%- for education in collections.education -%}
+        <li class="timeline__event">
+            {% include "education.njk" %}
+        </li>
+    {%- endfor -%}
+</ul>

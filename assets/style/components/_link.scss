@@ -1,0 +1,19 @@
+:root {
+	--link-color: var(--accent-color);
+	--link-color--hover: #e9e7da;
+}
+
+a {
+	transition: color 300ms ease-in-out;
+	text-decoration: none;
+	cursor: pointer;
+
+	&,
+	&:visited {
+		color: var(--link-color);
+	}
+
+	&:hover {
+		color: var(--link-color--hover);
+	}
+}

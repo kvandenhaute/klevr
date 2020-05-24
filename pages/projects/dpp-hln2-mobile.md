@@ -1,6 +1,6 @@
 ---
 name: HLN 2.0 mobile
-client: De Persgroep Publishing N.V.
+client: DPG Media nv
 function:
     - Frontend Developer
 from: 2016-01-06
@@ -11,7 +11,7 @@ keywords:
     - CSS3
     - mobile first
     - progressive enhancement
-    - agile
+    - Agile
     - continuous integration
     - scrum
     - tdd
@@ -20,5 +20,6 @@ keywords:
     - IntelliJ
     - Jenkins
     - Jira
+    - Zeplin
 ---
 More information will follow at the end of the project.
