@@ -4,9 +4,7 @@
 :root {
 	--book-background-color: #4c5b5c;
 	--book-text-color: #e9e7da;
-
 	--book-header-border-color: var(--accent-color);
-
 	--book-subtitle-color: #404d4e;
 	--book-subtitle-box-shadow-color: #58696a;
 }
@@ -39,9 +37,7 @@
 
 	@include mq($bp-tablet--sm) {
 		position: relative;
-		height: 300px;
-		margin-left: 200px;
-		padding-left: 1rem;
+		padding-left: 14.5rem;
 		text-align: left;
 	}
 }
@@ -52,39 +48,14 @@
 	text-transform: lowercase;
 
 	@include mq($bp-tablet--sm) {
-		position: absolute;
-		right: 2rem;
-		bottom: 50%;
-		left: 1rem;
-		padding-bottom: .5rem;
 		font-size: 3.5em;
-
-		&::before {
-			position: absolute;
-			right: -1rem;
-			bottom: -3px;
-			left: -200px;
-			height: 1px;
-			background-color: var(--emphasize-text-color);
-			content: '';
-		}
-
-		&::after {
-			position: absolute;
-			right: -1rem;
-			bottom: 0;
-			left: -200px;
-			height: 1px;
-			background-color: var(--book-text-color);
-			content: '';
-		}
 	}
 }
 
 .book__subtitle {
 	display: inline-block;
 	position: relative;
-	font-family: $font-family-monospace;
+	font-family: $monospace;
 	font-size: 4vw;
 	font-weight: 400;
 
@@ -100,10 +71,6 @@
 	}
 
 	@include mq($bp-tablet--sm) {
-		position: absolute;
-		top: 50%;
-		left: 1rem;
-		margin-top: .5rem;
 		font-size: 1.4375em;
 	}
 }

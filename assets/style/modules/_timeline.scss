@@ -1,3 +1,5 @@
+@import '../mixins';
+
 :root {
 	--timeline-color: var(--border-color);
 	--timeline-event-bullet-color: #f8bb10;
@@ -6,18 +8,24 @@
 
 .timeline {
 	position: relative;
-	margin-top: 0;
+	margin-top: .25em;
 	padding-left: 1rem;
 	list-style-type: none;
 
 	&::before {
 		position: absolute;
-		top: -1rem;
-		bottom: -1rem;
+		top: -.875em;
+		bottom: -1.625em;
 		left: 0;
 		width: 1px;
 		background-color: var(--timeline-color);
 		content: '';
+	}
+
+	.section--projects &::before {
+		@include mq($bp-tablet--sm) {
+			top: 2rem;
+		}
 	}
 }
 
@@ -49,6 +57,6 @@
 	}
 
 	& + & {
-		margin-top: 2rem;
+		margin-top: 1.75em;
 	}
 }
