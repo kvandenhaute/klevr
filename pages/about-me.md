@@ -6,10 +6,10 @@ order: 1
 tags:
     - section
 ---
-Hi, I'm Kevin. Passionate web developer, enthusiast LEGO builder (AFOL1), gadget freak and
+Hi, I'm Kevin. Passionate web developer, enthusiast LEGO builder (AFOL¹), gadget freak and
 occasionally sporty too. Happily maried, and living in the Brussels area.
 
-Since the age of 152 I'm passionated by the web. I had my first PC at the same age. It didn't
+Since the age of 15² I'm passionated by the web. I had my first PC at the same age. It didn't
 take too long or I was building my first website in Microsoft FrontPage. Black background,
 limegreen text in Comic Sans MS and animated gifs overload. Those were the days. To make it
 public I used the well known Geocities.
