@@ -13,10 +13,10 @@
 
 	&::before {
 		position: absolute;
-		top: 250px;
+		top: 66px;
 		right: 0;
 		left: 0;
-		height: 2rem;
+		height: 1rem;
 		//background-color: red;
 		//content: '';
 		z-index: 1;
@@ -28,26 +28,23 @@
 		justify-content: flex-start;
 
 		&::before {
-			left: -200px;
+			left: -12.5rem;
 		}
 	}
 
-	& + & {
-		margin-top: 1.625em;
-	}
-
-	&--projects {
+	& + &--projects {
 		@include mq($bp-tablet--sm) {
-			margin-top: -.4375rem;
+			//margin-top: -.4375em;
 		}
 	}
 }
 
 .section__header {
 	position: relative;
-	padding: 1rem;
+	padding: 1em 1rem .875em;
 	border-top: 1px solid var(--border-color);
 	border-bottom: 1px solid var(--border-color);
+	//border-bottom-color: red;
 	background-color: var(--section-header-background-color);
 
 	&::after {
@@ -61,6 +58,7 @@
 
 	@include mq($bp-tablet--sm) {
 		flex: 13.625rem 0 0;
+		padding-right: 2rem;
 		border-top: 0;
 		border-bottom: 0;
 		text-align: right;
@@ -103,35 +101,53 @@
 	font-size: 2em;
 	line-height: 1;
 
+	.section--expertise & {
+		@include mq($bp-tablet--sm) {
+			margin-top: .0625em;
+		}
+	}
+
 	.section--projects & {
 		@include mq($bp-tablet--sm) {
-			margin-top: .375rem;
+			margin-top: .1875em;
 		}
 	}
 }
 
 .section__subtitle {
-	margin-top: .325rem;
+	margin-top: .27em;
 	font-size: 1.125em;
 	font-weight: $opensanscondensed--normal;
 	line-height: 1;
 }
 
 .section__content {
-	padding: .625rem 1rem 0;
+	padding: 0 1rem;
+
+	@include mq($bp-tablet--sm) {
+		padding: 0 2rem;
+	}
 
 	.section--about & {
 		@include mq($bp-tablet--sm) {
-			padding-top: 23px;
+			//padding-top: 1.4375em;
 		}
+	}
+
+	.section--education & {
+		padding-bottom: 1.6875em;
 	}
 
 	.section--expertise & {
 		counter-reset: expertise;
+
+		@include mq($bp-tablet--sm) {
+			//padding-top: .6875em;
+		}
 	}
 
-	.section:last-child & {
-		padding-bottom: 1.625em;
+	.section--projects & {
+		padding-bottom: 2.3125em;
 	}
 }
 
@@ -152,13 +168,13 @@
 
 		@include mq($bp-phone--sm) {
 			&::before {
-				width: 1.5rem;
+				width: 1.09em;
 			}
 		}
 
 		@include mq($bp-tablet--sm) {
 			&:first-child {
-				margin-top: .375rem;
+				margin-top: .5em;
 			}
 		}
 	}
@@ -178,7 +194,7 @@
 	.section--skills & {
 		@include mq($bp-tablet--sm) {
 			&:first-child {
-				margin-top: .4375rem;
+				margin-top: .8125em;
 			}
 		}
 	}

@@ -11,17 +11,28 @@ h5 {
 }
 
 h3 {
-	margin-top: 1em;
 	font-size: 1.375em;
 	line-height: 1;
 
 	&:first-child {
-		margin-top: .09em;
+		margin-top: .5em;
+	}
+
+	p + & {
+		margin-top: 1em;
 	}
 }
 
 p {
 	margin: 0;
+
+	&:first-child {
+		margin-top: .625em;
+	}
+
+	&:last-child {
+		margin-bottom: 1.625em;
+	}
 
 	h3 + & {
 		margin-top: .4375em;

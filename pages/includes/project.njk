@@ -22,9 +22,11 @@
 			</ul>
 		</div>
 	</header>
-	{{ project.templateContent | safe }}
+	<div class="chapter__content">
+		{{ project.templateContent | safe }}
+	</div>
 	<footer class="chapter__footer">
-		<section class="tags">
+		<div class="tags">
 			<ul class="list">
 				{%- for keyword in project.data.keywords | sort -%}
 					<li class="list-item">
@@ -32,6 +34,6 @@
 					</li>
 				{%- endfor -%}
 			</ul>
-		</section>
+		</div>
 	</footer>
 </article>

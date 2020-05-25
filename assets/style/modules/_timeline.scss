@@ -8,23 +8,34 @@
 
 .timeline {
 	position: relative;
-	margin-top: .25em;
+	margin-top: .9375em;
 	padding-left: 1rem;
 	list-style-type: none;
 
 	&::before {
 		position: absolute;
-		top: -.875em;
-		bottom: -1.625em;
+		top: -.9375em;
+		bottom: 0;
 		left: 0;
 		width: 1px;
 		background-color: var(--timeline-color);
+		//background-color: red;
 		content: '';
 	}
 
-	.section--projects &::before {
+	.section--education &::before {
+		bottom: -1.6875em;
+
 		@include mq($bp-tablet--sm) {
-			top: 2rem;
+			//top: 2rem;
+		}
+	}
+
+	.section--projects &::before {
+		bottom: -2.3125em;
+
+		@include mq($bp-tablet--sm) {
+			//top: 2rem;
 		}
 	}
 }
@@ -57,6 +68,6 @@
 	}
 
 	& + & {
-		margin-top: 1.75em;
+		margin-top: 2.25em;
 	}
 }
