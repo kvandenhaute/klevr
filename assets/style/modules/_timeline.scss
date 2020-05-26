@@ -19,7 +19,6 @@
 		left: 0;
 		width: 1px;
 		background-color: var(--timeline-color);
-		//background-color: red;
 		content: '';
 
 		@include mq($bp-tablet--sm) {

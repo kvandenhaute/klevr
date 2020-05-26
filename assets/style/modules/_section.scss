@@ -9,27 +9,10 @@
 }
 
 .section {
-	position: relative;
-
-	&::before {
-		position: absolute;
-		top: 48px;
-		right: 0;
-		left: 0;
-		height: 1px;
-		//background-color: red;
-		//content: '';
-		z-index: 1;
-	}
-
 	@include mq($bp-tablet--sm) {
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: flex-start;
-
-		&::before {
-			left: -12.5rem;
-		}
 	}
 }
 
@@ -38,7 +21,6 @@
 	padding: .1px 1rem;
 	border-top: 1px solid var(--border-color);
 	border-bottom: 1px solid var(--border-color);
-	//border-bottom-color: red;
 	background-color: var(--section-header-background-color);
 
 	&::after {
@@ -55,7 +37,6 @@
 		padding-right: 2rem;
 		border-top: 0;
 		border-bottom: 0;
-		//background-color: lawngreen;
 		text-align: right;
 
 		&::after {
@@ -63,27 +44,9 @@
 		}
 	}
 
-	//.section--about & {
-	//	@include icon('about', 'A', after);
-	//}
-	//
-	//.section--education & {
-	//	@include icon('education', 'E', after);
-	//}
-	//
-	//.section--expertise & {
-	//	@include icon('expertise', 'E', after);
-	//}
-	//
-	//.section--projects & {
-	//	@include icon('project', 'P', after) {
-	//		font-size: 3.6875em;
-	//	};
-	//}
-	//
-	//.section--skills & {
-	//	@include icon('code', 'S', after);
-	//}
+	@include mq($bp-desktop--sm) {
+		flex-basis: calc(50% - #{$book-max-width / 2});
+	}
 
 	.section:first-child & {
 		border-top: 0;
@@ -104,9 +67,19 @@
 		}
 	}
 
+	@include mq($bp-desktop--lg) {
+		margin-top: 0;
+		font-size: 4em;
+	}
+
 	.section--skills & {
 		@include mq($bp-tablet--sm) {
 			margin-top: 0;
+		}
+
+		@include mq($bp-desktop--lg) {
+			margin-top: 0;
+			font-size: 4em;
 		}
 	}
 
@@ -114,6 +87,11 @@
 	.section--projects & {
 		@include mq($bp-tablet--sm) {
 			margin-top: .625em;
+		}
+
+		@include mq($bp-desktop--lg) {
+			margin-top: 0;
+			font-size: 4em;
 		}
 	}
 }
@@ -125,6 +103,10 @@
 	font-size: 1.125em;
 	font-weight: $opensanscondensed--normal;
 	line-height: 1;
+
+	@include mq($bp-desktop--lg) {
+		font-size: 2.5em;
+	}
 }
 
 .section__content {
@@ -132,6 +114,10 @@
 
 	@include mq($bp-tablet--sm) {
 		padding: 0 2rem;
+	}
+
+	@include mq($bp-desktop--lg) {
+		max-width: $book-max-width;
 	}
 
 	.section--about & {
@@ -166,11 +152,16 @@
 			letter-spacing: 1px;
 			text-align: center;
 			content: counters(expertise, '.', decimal-leading-zero);
-		}
 
-		@include mq($bp-phone--sm) {
-			&::before {
+			@include mq($bp-phone--sm) {
 				width: 1.09em;
+			}
+
+			@include mq($bp-tablet--sm) {
+				width: auto;
+				padding-right: .25em;
+				font-weight: $opensanscondensed--normal;
+				content: counter(expertise)'.';
 			}
 		}
 	}

@@ -40,6 +40,11 @@
 		padding-left: 15.5rem;
 		text-align: left;
 	}
+
+	@include mq($bp-desktop--sm) {
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
 
 .book__title {
@@ -49,6 +54,10 @@
 
 	@include mq($bp-tablet--sm) {
 		font-size: 3.5em;
+	}
+
+	@include mq($bp-desktop--sm) {
+		margin-left: calc(50% - #{$book-max-width / 2} + 2rem);
 	}
 }
 
@@ -73,6 +82,10 @@
 	@include mq($bp-tablet--sm) {
 		font-size: 1.4375em;
 	}
+
+	@include mq($bp-desktop--sm) {
+		margin-left: calc(50% - #{$book-max-width / 2} + 2rem);
+	}
 }
 
 .book__footer {
@@ -81,4 +94,10 @@
 	font-size: 1.25em;
 	font-weight: $opensanscondensed--normal;
 	text-align: center;
+
+	@include mq($bp-desktop--sm) {
+		margin-left: calc(50% - #{$book-max-width / 2} + 2rem);
+		padding-left: 0;
+		text-align: left;
+	}
 }
