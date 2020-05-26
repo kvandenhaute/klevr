@@ -1,5 +1,5 @@
 ---
-title: b Skills
+title: Skills
 description: By the number
 key: skills
 order: 3

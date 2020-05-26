@@ -1,5 +1,5 @@
 ---
-title: b Expertise
+title: Expertise
 description: Batman would be jealous
 key: expertise
 order: 2

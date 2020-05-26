@@ -21,21 +21,26 @@
 		background-color: var(--timeline-color);
 		//background-color: red;
 		content: '';
+
+		@include mq($bp-tablet--sm) {
+			left: -1rem;
+		}
+	}
+
+	@include mq($bp-tablet--sm) {
+		padding-left: 0;
 	}
 
 	.section--education &::before {
+		top: -.625em;
 		bottom: -1.6875em;
-
-		@include mq($bp-tablet--sm) {
-			//top: 2rem;
-		}
 	}
 
 	.section--projects &::before {
 		bottom: -2.3125em;
 
 		@include mq($bp-tablet--sm) {
-			//top: 2rem;
+			top: 1.25em;
 		}
 	}
 }
@@ -43,25 +48,27 @@
 .timeline__event {
 	position: relative;
 
-	&::before {
+	&::before,
+	&::after {
 		position: absolute;
+		content: '';
+	}
+
+	&::before {
 		top: 1.1875em;
 		left: -1.375rem;
 		width: .8125em;
 		height: .8125em;
 		background-color: var(--timeline-event-bullet-background-color);
-		content: '';
 	}
 
 	&::after {
-		position: absolute;
 		top: 1.375em;
 		left: -1.1875rem;
 		width: .4375rem;
 		height: .4375rem;
 		border-radius: 50%;
 		background-color: var(--timeline-event-bullet-color);
-		content: '';
 	}
 
 	& + & {

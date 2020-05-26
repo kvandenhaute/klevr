@@ -13,7 +13,7 @@
 
 	&::before {
 		position: absolute;
-		top: 40px;
+		top: 48px;
 		right: 0;
 		left: 0;
 		height: 1px;
@@ -29,12 +29,6 @@
 
 		&::before {
 			left: -12.5rem;
-		}
-	}
-
-	& + &--projects {
-		@include mq($bp-tablet--sm) {
-			//margin-top: -.4375em;
 		}
 	}
 }
@@ -69,13 +63,6 @@
 		}
 	}
 
-	.section--expertise & {
-		@include mq($bp-tablet--sm) {
-			//padding-top: .25em;
-			//margin-top: -.375em;
-		}
-	}
-
 	//.section--about & {
 	//	@include icon('about', 'A', after);
 	//}
@@ -105,26 +92,28 @@
 
 .section__title {
 	margin-top: .375em;
-
-	//padding-top: -.09375em;
 	color: var(--section-title-color);
 	font-size: 2em;
 	line-height: 1;
 
-	//@include mq($bp-tablet--sm) {
-	//	margin-top: 0;
-	//}
+	@include mq($bp-tablet--sm) {
+		margin-top: .125em;
 
-	.section--expertise & {
-		@include mq($bp-tablet--sm) {
-			//margin-top: 0;
-			//margin-top: -.375em;
+		.section:first-child & {
+			margin-top: .375em;
 		}
 	}
 
+	.section--skills & {
+		@include mq($bp-tablet--sm) {
+			margin-top: 0;
+		}
+	}
+
+	.section--education &,
 	.section--projects & {
 		@include mq($bp-tablet--sm) {
-			//margin-top: .1875em;
+			margin-top: .625em;
 		}
 	}
 }
@@ -157,10 +146,6 @@
 
 	.section--expertise & {
 		counter-reset: expertise;
-
-		@include mq($bp-tablet--sm) {
-			//padding-top: .6875em;
-		}
 	}
 
 	.section--projects & {

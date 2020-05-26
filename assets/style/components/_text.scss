@@ -36,19 +36,13 @@ p:not([class]) {
 
 	&:first-child {
 		margin-top: .625em;
-
-		@include mq($bp-tablet--sm) {
-			&:first-child {
-				margin-top: .6875em;
-			}
-		}
 	}
 
 	&:last-child {
 		margin-bottom: 1.625em;
 	}
 
-	h5 + & {
+	h3 + & {
 		margin-top: .4375em;
 	}
 
