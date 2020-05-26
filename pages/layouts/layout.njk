@@ -18,10 +18,10 @@
 		<h1 class="book__title" title="Kevin Van Den Haute">
 			Kevin <span class="emphasize">Van Den Haute</span>
 		</h1>
-		<h2 class="book__subtitle">
+		<p class="book__lead">
 			freelance web developer<br>
 			frontend expert
-		</h2>
+		</p>
 	</header>
 	<main class="content">
 		{%- for section in collections.sections -%}
@@ -30,7 +30,7 @@
 					<h2 class="section__title">
 						{{ section.data.title }}
 					</h2>
-					<h3 class="section__subtitle">{{ section.data.description }}</h3>
+					<p class="section__lead">{{ section.data.description }}</p>
 				</header>
 				<div class="section__content">
 					{{ section.templateContent | safe }}

@@ -6,7 +6,7 @@ order: 1
 tags:
     - section
 ---
-Hi, I'm Kevin. Passionate web developer, enthusiast LEGO builder (AFOL¹), gadget freak and
+Hi, I'm Kevin. Passionate web developer, enthusiast LEGO builder (<abrr>AFOL</abrr>¹), gadget freak and
 occasionally sporty too. Happily maried, and living in the Brussels area.
 
 Since the age of 15² I'm passionated by the web. I had my first PC at the same age. It didn't
